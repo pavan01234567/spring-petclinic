@@ -8,6 +8,6 @@ FROM  openjdk:25-ea-17-jdk as run
 RUN adduser -D -h /user/share/demo -s /bin/bash pavan 
 USER pavan
 WORKDIR /user/share/demo
-COPY --from=build /target/*.jar
+COPY --from=build /target/*.jar .
 EXPOSE 8080/tcp
 CMD ["java","-jar","*.jar"]
