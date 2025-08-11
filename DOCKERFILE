@@ -10,4 +10,4 @@ USER testuser1
 WORKDIR /usr/share/spc
 COPY --from=build /spring-petclinic/target/*.jar name.jar
 EXPOSE 8080/tcp
-CMD ["java", "-jar", "name.jar"]
+CMD ["java", "-jar","name.jar"]
